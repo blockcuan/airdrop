@@ -1,0 +1,29 @@
+import random
+
+welcome_mesege = "Game BlockCUAN"
+
+print("==================")
+print(f"=={welcome_mesege}==") 
+print("==================")
+
+nama = input("Sebelum mulai siapakah namamu: ")
+print(f"Hai {nama}")
+umur = int(input("Berapa Umurmu: "))
+
+if umur >= 12:
+    print("Yuk kita mulai bermain")
+    print(f'''Perhatikan SOAL Berikut:
+      
+      >>>>  |1|  |2|  |3|  |4|  <<<<
+      ''')
+    #random : nomor 1 - 4
+    cuan_posision = random.randint(1, 4)
+    while True:
+        tebakan = int(input("Ada di kotak berapakah, CUAN Bersembunyi? 1/2/3/4: "))
+        if tebakan == cuan_posision:
+            print(f"Selamat {nama} 🚀 Jawaban kamu benar,Posisi CUAN ada di nomor {cuan_posision}")
+            break
+        else:
+            print(f"Ooppss Tebakan Kamu 😅Salah, Silahkan Coba Lagi")
+else:
+    print(f"Maaf🙏 {nama} Kamu Belum Cukup Umur, Untuk Ikut Permainan INI")
